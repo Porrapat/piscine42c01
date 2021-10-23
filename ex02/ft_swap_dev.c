@@ -17,8 +17,26 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
+void	ft_swap(int *a, int *b)
+{
+	int	temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
 int	main(void)
 {
-	ft_putchar('c');
+	int	a;
+	int	b;
+
+	a = 1;
+	b = 2;
+	ft_putchar(a + '0');
+	ft_putchar(b + '0');
+	ft_swap(&a, &b);
+	ft_putchar(a + '0');
+	ft_putchar(b + '0');
 	return (0);
 }
