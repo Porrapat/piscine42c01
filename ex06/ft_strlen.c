@@ -9,3 +9,16 @@
 /*   Updated: 2021/10/20 23:53:55 by porrapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
+
+int	ft_strlen(char *str)
+{
+	int	len;
+
+	len = 0;
+	while (*str++)
+	{
+		len++;
+	}
+	return (len);
+}
