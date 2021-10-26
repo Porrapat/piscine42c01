@@ -32,8 +32,29 @@ build-sample: compile
 	-./test_ex07_ft_rev_int_tab > result_sample_ex07_ft_rev_int_tab.txt
 	-./test_ex08_ft_sort_int_tab > result_sample_ex08_ft_sort_int_tab.txt
 
+run:
+	-./test_ex00_ft_ft > result_current_ex00_ft_ft.txt
+	-./test_ex01_ft_ultimate_ft > result_current_ex01_ft_ultimate_ft.txt
+	-./test_ex02_ft_swap > result_current_ex02_ft_swap.txt
+	-./test_ex03_ft_div_mod > result_current_ex03_ft_div_mod.txt
+	-./test_ex04_ft_ultimate_div_mod > result_current_ex04_ft_ultimate_div_mod.txt
+	-./test_ex05_ft_putstr > result_current_ex05_ft_putstr.txt
+	-./test_ex06_ft_strlen > result_current_ex06_ft_strlen.txt
+	-./test_ex07_ft_rev_int_tab > result_current_ex07_ft_rev_int_tab.txt
+	-./test_ex08_ft_sort_int_tab > result_current_ex08_ft_sort_int_tab.txt
 
-all:	norminette	compile
+all:	norminette	compile run
+
+test:	all
+	-diff result_current_ex00_ft_ft.txt result_sample_ex00_ft_ft.txt
+	-diff result_current_ex01_ft_ultimate_ft.txt result_sample_ex01_ft_ultimate_ft.txt
+	-diff result_current_ex02_ft_swap.txt result_sample_ex02_ft_swap.txt
+	-diff result_current_ex03_ft_div_mod.txt result_sample_ex03_ft_div_mod.txt
+	-diff result_current_ex04_ft_ultimate_div_mod.txt result_sample_ex04_ft_ultimate_div_mod.txt
+	-diff result_current_ex05_ft_putstr.txt result_sample_ex05_ft_putstr.txt
+	-diff result_current_ex06_ft_strlen.txt result_sample_ex06_ft_strlen.txt
+	-diff result_current_ex07_ft_rev_int_tab.txt result_sample_ex07_ft_rev_int_tab.txt
+	-diff result_current_ex08_ft_sort_int_tab.txt result_sample_ex08_ft_sort_int_tab.txt
 
 clean:
 	-rm -rf */*.out
@@ -51,7 +72,7 @@ clean:
 clean-sample:
 	-rm -rf result_sample_ex*.txt
 
-clean-befor-push-with-sample: clean
+clean-before-push-with-sample: clean
 	-git add .
 	-git commit -m "Build Sample Complete"
 	-git push origin master
