@@ -11,14 +11,10 @@
 /* ************************************************************************** */
 #include <unistd.h>
 
+void	ft_ultimate_ft(int *********nbr);
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-}
-
-void	ft_ultimate_ft(int *********nbr)
-{
-	*********nbr = 42;
 }
 
 void	ft_putnbr(int nb)

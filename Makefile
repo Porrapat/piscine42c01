@@ -11,15 +11,27 @@ norminette:
 	-norminette ./ex08/ft_sort_int_tab.c
 
 compile:
-	-gcc test_ex00_ft_ft.c -Wall -Werror -Wextra -o test_ex00_ft_ft
-	-gcc test_ex01_ft_ultimate_ft.c -Wall -Werror -Wextra -o test_ex01_ft_ultimate_ft
-	-gcc test_ex02_ft_swap.c -Wall -Werror -Wextra -o test_ex02_ft_swap
-	-gcc test_ex03_ft_div_mod.c -Wall -Werror -Wextra -o test_ex03_ft_div_mod
-	-gcc test_ex04_ft_ultimate_div_mod.c -Wall -Werror -Wextra -o test_ex04_ft_ultimate_div_mod
-	-gcc test_ex05_ft_putstr.c -Wall -Werror -Wextra -o test_ex05_ft_putstr
-	-gcc test_ex06_ft_strlen.c -Wall -Werror -Wextra -o test_ex06_ft_strlen
-	-gcc test_ex07_ft_rev_int_tab.c -Wall -Werror -Wextra -o test_ex07_ft_rev_int_tab
-	-gcc test_ex08_ft_sort_int_tab.c -Wall -Werror -Wextra -o test_ex08_ft_sort_int_tab
+	-gcc ./ex00/ft_ft.c test_ex00_ft_ft.c -Wall -Werror -Wextra -o test_ex00_ft_ft
+	-gcc ./ex01/ft_ultimate_ft.c test_ex01_ft_ultimate_ft.c -Wall -Werror -Wextra -o test_ex01_ft_ultimate_ft
+	-gcc ./ex02/ft_swap.c test_ex02_ft_swap.c -Wall -Werror -Wextra -o test_ex02_ft_swap
+	-gcc ./ex03/ft_div_mod.c test_ex03_ft_div_mod.c -Wall -Werror -Wextra -o test_ex03_ft_div_mod
+	-gcc ./ex04/ft_ultimate_div_mod.c test_ex04_ft_ultimate_div_mod.c -Wall -Werror -Wextra -o test_ex04_ft_ultimate_div_mod
+	-gcc ./ex05/ft_putstr.c test_ex05_ft_putstr.c -Wall -Werror -Wextra -o test_ex05_ft_putstr
+	-gcc ./ex06/ft_strlen.c test_ex06_ft_strlen.c -Wall -Werror -Wextra -o test_ex06_ft_strlen
+	-gcc ./ex07/ft_rev_int_tab.c test_ex07_ft_rev_int_tab.c -Wall -Werror -Wextra -o test_ex07_ft_rev_int_tab
+	-gcc ./ex08/ft_sort_int_tab.c test_ex08_ft_sort_int_tab.c -Wall -Werror -Wextra -o test_ex08_ft_sort_int_tab
+
+run:
+	-gcc ./ex00/ft_ft.c test_ex00_ft_ft.c -Wall -Werror -Wextra -o test_ex00_ft_ft
+	-gcc ./ex01/ft_ultimate_ft.c test_ex01_ft_ultimate_ft.c -Wall -Werror -Wextra -o test_ex01_ft_ultimate_ft
+	-gcc ./ex02/ft_swap.c test_ex02_ft_swap.c -Wall -Werror -Wextra -o test_ex02_ft_swap
+	-gcc ./ex03/ft_div_mod.c test_ex03_ft_div_mod.c -Wall -Werror -Wextra -o test_ex03_ft_div_mod
+	-gcc ./ex04/ft_ultimate_div_mod.c test_ex04_ft_ultimate_div_mod.c -Wall -Werror -Wextra -o test_ex04_ft_ultimate_div_mod
+	-gcc ./ex05/ft_putstr.c test_ex05_ft_putstr.c -Wall -Werror -Wextra -o test_ex05_ft_putstr
+	-gcc ./ex06/ft_strlen.c test_ex06_ft_strlen.c -Wall -Werror -Wextra -o test_ex06_ft_strlen
+	-gcc ./ex07/ft_rev_int_tab.c test_ex07_ft_rev_int_tab.c -Wall -Werror -Wextra -o test_ex07_ft_rev_int_tab
+	-gcc ./ex08/ft_sort_int_tab.c test_ex08_ft_sort_int_tab.c -Wall -Werror -Wextra -o test_ex08_ft_sort_int_tab
+
 
 all:	norminette	compile
 
@@ -35,14 +47,3 @@ clean:
 	-rm test_ex07_ft_rev_int_tab
 	-rm test_ex08_ft_sort_int_tab
 
-
-# hello:
-# 	echo "Hello World"
-# 	find . -regex '.*\.\(c\|cpp\|h\)$\' -print | norminette
-
-#	norminette
-
-#	git
-#	compile
-#	run
-#	clean

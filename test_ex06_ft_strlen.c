@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 #include <unistd.h>
 
+int	ft_strlen(char *str);
+
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
@@ -36,18 +38,6 @@ void	ft_putnbr(int nb)
 		}
 		ft_putchar(48 + nb % 10);
 	}
-}
-
-int	ft_strlen(char *str)
-{
-	int	len;
-
-	len = 0;
-	while (*str++)
-	{
-		len++;
-	}
-	return (len);
 }
 
 int	main(void)

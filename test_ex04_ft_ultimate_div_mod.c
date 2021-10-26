@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 #include <unistd.h>
 
+void	ft_ultimate_div_mod(int *a, int *b);
+
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
@@ -38,16 +40,7 @@ void	ft_putnbr(int nb)
 	}
 }
 
-void	ft_ultimate_div_mod(int *a, int *b)
-{
-	int	result;
-	int	reminder;
 
-	result = *a / *b;
-	reminder = *a % *b;
-	*a = result;
-	*b = reminder;
-}
 
 int	main(void)
 {

@@ -12,24 +12,10 @@
 #include <stdio.h>
 #include <unistd.h>
 
+void	ft_rev_int_tab(int *tab, int size);
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-}
-
-void	ft_rev_int_tab(int *tab, int size)
-{
-	int	index;
-	int	tmp;
-
-	index = 0;
-	while (index < size / 2)
-	{
-		tmp = tab[index];
-		tab[index] = tab[size - 1 - index];
-		tab[size - 1 - index] = tmp;
-		index++;
-	}
 }
 
 void	debug_dump_array(int numbers[], int size)
