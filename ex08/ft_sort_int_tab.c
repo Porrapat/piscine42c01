@@ -11,39 +11,26 @@
 /* ************************************************************************** */
 #include <stdbool.h>
 
-void	ft_swap(int *a, int *b)
-{
-	int	c;
-
-	c = *a;
-	*a = *b;
-	*b = c;
-}
-
 void	ft_sort_int_tab(int *tab, int size)
 {
-	int		read_index;
-	int		index;
-	bool	swapped;
+	int	a;
+	int	b;
+	int	tmp;
 
-	read_index = 0;
-	while (true)
+	a = 0;
+	while (a < size)
 	{
-		swapped = false;
-		index = 0;
-		while (index < size)
+		b = 0;
+		while (b < size)
 		{
-			if (tab[index] > tab[index + 1])
+			if (tab[b] >= tab[a])
 			{
-				ft_swap(&tab[index], &tab[index + 1]);
-				swapped = true;
+				tmp = tab[b];
+				tab[b] = tab[a];
+				tab[a] = tmp;
 			}
-			index++;
+			b++;
 		}
-		if (!swapped)
-		{
-			break ;
-		}
-		read_index++;
+		a++;
 	}
 }
